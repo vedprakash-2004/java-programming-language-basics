@@ -1,14 +1,12 @@
-public class javaBasics {
-    public static void main(String args[]) {
-        int a = 10;
-        int b = 5;
-        int c = (a + b);
-        System.out.println(c);
+import java.util.Scanner;
 
-        a = 40;
-        b = 80;
-        c = (a + b);
-        System.out.println(c);
+public class javaBasics {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the name");
+        String input = sc.nextLine();
+        System.out.println(input);
 
     }
-}// boilerplate code
+}
