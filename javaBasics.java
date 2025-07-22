@@ -2,9 +2,12 @@ public class javaBasics {
 
     public static void main(String args[]) {
 
-        // System.out.println((3 > 2) && (5 > 0));
-        // System.out.println((3 < 2) || (5 < 0));
+        int x = 2, y = 5;
 
-        System.out.println(!(3 > 2));
+        int exp1 = (x * y / x);
+        int exp2 = (x * (y / x));
+
+        System.out.print(exp1 + " , ");
+        System.out.println(exp2);
     }
 }
