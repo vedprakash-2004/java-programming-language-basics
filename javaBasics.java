@@ -2,15 +2,21 @@ public class javaBasics {
 
     public static void main(String args[]) {
 
-        // int a = 10;
-        // int b = --a;
-        // System.out.println(a);
-        // System.out.println(b);
+        // int A = 10;
+        // int B = 5;
+        // System.out.println(A == B);
 
-        int a = 10;
-        int b = a--;
-        System.out.println(a);
-        System.out.println(b);
+        // int A = 10;
+        // int B = 5;
+        // System.out.println(A != B);
+
+        // int A = 10;
+        // int B = 5;
+        // System.out.println(A > B);
+
+        int A = 10;
+        int B = 5;
+        System.out.println(A < B);
 
     }
 }
