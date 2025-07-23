@@ -4,13 +4,17 @@ public class javaBasics {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        if (n % 2 == 0) {
-            System.out.println("this number is even");
+        int income = sc.nextInt();
+        int tax;
 
+        if (income < 500000) {
+            tax = 0;
+        } else if (income >= 500000 && income < 1000000) {
+            tax = (int) (income * 0.2);
         } else {
-            System.out.println("this number is odd");
+            tax = (int) (income * 0.3);
         }
+        System.out.println("your tax is :" + tax);
 
     }
 }
