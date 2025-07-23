@@ -3,16 +3,14 @@ import java.util.*;
 public class javaBasics {
 
     public static void main(String args[]) {
-        int age = 16;
+        int a = 1;
+        int b = 3;
 
-        if (age >= 18) {
-            System.out.println("adult, drive, vote");
+        if (a >= b) {
+            System.out.println("a is largest of 2");
 
-        }
-        if (age > 13 && age < 18) {
-            System.out.println("teenager");
         } else {
-            System.out.println("not adult");
+            System.out.println("b is largest of 2");
         }
 
     }
