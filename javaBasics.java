@@ -3,11 +3,34 @@ import java.util.*;
 public class javaBasics {
 
     public static void main(String[] args) {
-        int number = 4;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a:");
+        int a = sc.nextInt();
+        System.out.println("enter b:");
+        int b = sc.nextInt();
+        System.out.println("enter operator");
+        char operator = sc.next().charAt(0);
 
-        // ternary operator
-        String type = ((number % 2) == 0) ? "even" : "odd";
-        System.out.println(type);
+        switch (operator) {
+            case '+':
+                System.out.println(a + b);
+                break;
+            case '-':
+                System.out.println(a - b);
+                break;
+            case '*':
+                System.out.println(a * b);
+                break;
+            case '/':
+                System.out.println(a / b);
+                break;
+            case '%':
+                System.out.println(a % b);
+                break;
+            default:
+                System.out.println("wrong operator");
+
+        }
     }
 
 }
