@@ -3,10 +3,15 @@ import java.util.*;
 public class javaBasics {
 
     public static void main(String args[]) {
-        int a = 63, b = 36;
-        boolean x = (a < b) ? true : false;
-        int y = (a > b) ? a : b;
-        System.out.println(x);
-        System.out.println(y);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int year = sc.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println("This year is leap year");
+
+        } else {
+            System.out.println("This year is not leap year");
+        }
     }
 }
