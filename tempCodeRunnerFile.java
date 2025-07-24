@@ -1,1 +1,1 @@
- System.out.println(var);
+System.out.println(y);
