@@ -11,7 +11,7 @@ public class javaBasics {
             System.out.println("n is prime");
         } else {
             boolean isPrime = true;
-            for (int i = 2; i <= n - 1; i++) { // n is multiple of i (i not equal to 1 or n)
+            for (int i = 2; i <= Math.sqrt(n); i++) { // n is multiple of i (i not equal to 1 or n)
                 if (n % i == 0) {
                     isPrime = false;
                 }
