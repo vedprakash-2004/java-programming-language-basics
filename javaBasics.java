@@ -3,11 +3,13 @@ import java.util.*;
 public class javaBasics {
 
     public static void main(String args[]) {
-        int counter = 1;
-        do {
-            System.out.println("Hello World");
-            counter++;
-        } while (counter <= 10);
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break;
+            }
+            System.out.println(i);
+        }
+        System.out.println("I am out of the loop");
 
     }
 }
