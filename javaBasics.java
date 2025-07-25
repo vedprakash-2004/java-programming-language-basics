@@ -3,13 +3,17 @@ import java.util.*;
 public class javaBasics {
 
     public static void main(String args[]) {
-        for (int i = 1; i <= 5; i++) {
-            if (i == 3) {
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            System.out.println("Enter your number:");
+            int n = sc.nextInt();
+            if (n % 10 == 0) {
                 break;
             }
-            System.out.println(i);
-        }
-        System.out.println("I am out of the loop");
+            System.out.println(n);
+
+        } while (true);
 
     }
 }
