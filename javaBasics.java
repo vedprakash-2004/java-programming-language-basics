@@ -2,20 +2,17 @@ import java.util.*;
 
 public class javaBasics {
 
-    public static void main(String args[]) {
+    public static void printMultiplicationTable(int number) {
         Scanner sc = new Scanner(System.in);
-
-        // int num; // To hold number
-
-        int fact = 1; // To hold factorial
-
-        System.out.println("Enter any positive intereger:");
-        int num = sc.nextInt();
-
-        for (int i = 1; i <= num; i++) {
-            fact *= i;
+        System.out.println("Enter number:");
+        int n = sc.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " * " + i + " = " + n * i);
         }
-        System.out.println("factorial: " + fact);
 
+    }
+
+    public static void main(String[] args) {
+        printMultiplicationTable(5);
     }
 }
