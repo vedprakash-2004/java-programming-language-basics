@@ -4,25 +4,27 @@ public class javaBasics {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number:");
-        int n = sc.nextInt();
 
-        if (n == 2) {
-            System.out.println("n is prime");
-        } else {
-            boolean isPrime = true;
-            for (int i = 2; i <= Math.sqrt(n); i++) { // n is multiple of i (i not equal to 1 or n)
-                if (n % i == 0) {
-                    isPrime = false;
-                }
+        int number;
+        int choice;
+        int evenSum = 0;
+        int oddSum = 0;
 
-                if (isPrime == true) {
-                    System.out.println("n is prime");
-                } else {
-                    System.out.println("n is not prime");
-                }
+        do {
+            System.out.println("Enter the number:");
+            number = sc.nextInt();
+
+            if (number % 2 == 0) {
+                evenSum += number;
+            } else {
+                oddSum += number;
             }
-        }
+            System.out.println("Do you want to continue? press 1 for yes or 0 for no");
+            choice = sc.nextInt();
+        } while (choice == 1);
+
+        System.out.println("sum of even numbers:" + evenSum);
+        System.out.println("sum of odd numbers" + oddSum);
 
     }
 }
