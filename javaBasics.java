@@ -1,16 +1,13 @@
 import java.util.*;
 
 public class javaBasics {
+
     public static void main(String args[]) {
-        int n = 10899;
-        int rev = 0;
+        int counter = 1;
+        do {
+            System.out.println("Hello World");
+            counter++;
+        } while (counter <= 10);
 
-        while (n > 0) {
-            int lastDigit = n % 10;
-            rev = (rev * 10) + lastDigit;
-            n = n / 10;
-
-        }
-        System.out.println(rev);
     }
 }
