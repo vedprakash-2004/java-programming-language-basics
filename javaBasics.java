@@ -2,12 +2,15 @@ import java.util.*;
 
 public class javaBasics {
     public static void main(String args[]) {
-        int counter = 1;
-        while (counter <= 10) {
-            System.out.println(counter);
-            counter++;
+        int n = 10899;
+        int rev = 0;
+
+        while (n > 0) {
+            int lastDigit = n % 10;
+            rev = (rev * 10) + lastDigit;
+            n = n / 10;
 
         }
-
+        System.out.println(rev);
     }
 }
