@@ -5,26 +5,17 @@ public class javaBasics {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
 
-        int number;
-        int choice;
-        int evenSum = 0;
-        int oddSum = 0;
+        // int num; // To hold number
 
-        do {
-            System.out.println("Enter the number:");
-            number = sc.nextInt();
+        int fact = 1; // To hold factorial
 
-            if (number % 2 == 0) {
-                evenSum += number;
-            } else {
-                oddSum += number;
-            }
-            System.out.println("Do you want to continue? press 1 for yes or 0 for no");
-            choice = sc.nextInt();
-        } while (choice == 1);
+        System.out.println("Enter any positive intereger:");
+        int num = sc.nextInt();
 
-        System.out.println("sum of even numbers:" + evenSum);
-        System.out.println("sum of odd numbers" + oddSum);
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+        }
+        System.out.println("factorial: " + fact);
 
     }
 }
