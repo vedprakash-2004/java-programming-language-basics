@@ -3,12 +3,18 @@ import java.util.*;
 public class javaBasics {
 
     public static void main(String args[]) {
-        for (int i = 1; i <= 10; i++) {
-            if (i == 5) {
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            System.out.println("Enter your number:");
+            int n = sc.nextInt();
+
+            if (n % 10 == 0) {
                 continue;
             }
-            System.out.println(i);
-        }
+            System.out.println(n);
+
+        } while (true);
 
     }
 }
