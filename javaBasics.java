@@ -1,18 +1,12 @@
-import java.util.*;
-
 public class javaBasics {
+    public static void main(String args[]) {
+        for (int i = 1; i <= 20; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
 
-    public static void printMultiplicationTable(int number) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number:");
-        int n = sc.nextInt();
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(n + " * " + i + " = " + n * i);
+            }
+            System.out.println();
+
         }
-
-    }
-
-    public static void main(String[] args) {
-        printMultiplicationTable(5);
     }
 }
