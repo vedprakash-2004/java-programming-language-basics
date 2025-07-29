@@ -49,29 +49,48 @@ public class javaBasics {
     // return a + b + c;
     // }
 
-    public static float sum(int a, int b) {
-        return a + b;
-    }
+    // public static float sum(int a, int b) {
+    // return a + b;
+    // }
 
-    // func to cal float sum
+    // // func to cal float sum
 
-    public static float sum(float a, float b) {
-        return a + b;
-    }
+    // public static float sum(float a, float b) {
+    // return a + b;
+    // }
+
+    // public static boolean isPrime(int n) {
+
+    // for (int i = 2; i <= n - 1; i++) {
+    // if (n % i == 0) {
+    // return false;
+    // }
+
+    // }
+    // return true;
+    // }
+
+    // public static void main(String args[]) {
+    // isPrime(3);
+
+    // }
 
     public static boolean isPrime(int n) {
+        if (n == 2) {
+            return true;
 
-        for (int i = 2; i <= n - 1; i++) {
+        }
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
             }
-
         }
         return true;
     }
 
-    public static void main(String args[]) {
-        isPrime(3);
-
+    public static void main(String[] args) {
+        System.out.println(isPrime(7));
     }
+
 }
