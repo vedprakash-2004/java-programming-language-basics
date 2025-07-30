@@ -104,27 +104,36 @@ public class javaBasics {
     // primesInRange(20);
     // }
 
-    public static void decToBin(int n) {
-        int pow = 0;
-        int binNum = 0;
+    // public static void decToBin(int n) {
+    // int pow = 0;
+    // int binNum = 0;
 
-        while (n > 0) {
-            int rem = n % 2;
-            binNum = binNum + (rem * (int) Math.pow(10, pow));
-            pow++;
-            n = n / 2;
-        }
-        System.out.println("binary form of " + binNum + "=" + binNum);
+    // while (n > 0) {
+    // int rem = n % 2;
+    // binNum = binNum + (rem * (int) Math.pow(10, pow));
+    // pow++;
+    // n = n / 2;
+    // }
+    // System.out.println("binary form of " + binNum + "=" + binNum);
 
-    }
+    // }
 
-    public static void printS() {
-        int s = 45;
-    }
+    // public static void printS() {
+    // int s = 45;
+    // }
+
+    // public static void main(String[] args) {
+
+    // int a = 45;
+    // System.out.println();
+    // }
 
     public static void main(String[] args) {
-
-        int a = 45;
-        System.out.println();
+        int p = 10;
+        {
+            int s = 45;
+            System.out.println(p);
+        }
+        System.out.println(p);
     }
 }
