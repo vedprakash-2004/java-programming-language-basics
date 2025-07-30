@@ -118,7 +118,13 @@ public class javaBasics {
 
     }
 
+    public static void printS() {
+        int s = 45;
+    }
+
     public static void main(String[] args) {
-        decToBin(12);
+
+        int a = 45;
+        System.out.println();
     }
 }
