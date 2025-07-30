@@ -1,5 +1,7 @@
 import java.util.*;
 
+import javax.sql.rowset.spi.SyncResolver;
+
 public class javaBasics {
     // public static void printHelloWorld() {
     // System.out.println("Hello World");
@@ -76,10 +78,10 @@ public class javaBasics {
     // }
 
     public static boolean isPrime(int n) {
-        if (n == 2) {
+        if (n <= 1)
+            return false; // edge case
+        if (n == 2)
             return true;
-
-        }
 
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
@@ -89,8 +91,16 @@ public class javaBasics {
         return true;
     }
 
-    public static void main(String[] args) {
-        System.out.println(isPrime(7));
+    public static void primesInRange(int n) {
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(); // for new line after all primes
     }
 
+    public static void main(String[] args) {
+        primesInRange(20);
+    }
 }
