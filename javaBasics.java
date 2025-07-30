@@ -129,11 +129,10 @@ public class javaBasics {
     // }
 
     public static void main(String[] args) {
-        int p = 10;
-        {
-            int s = 45;
-            System.out.println(p);
+        for (int i = 1, j = 0, k = 4; i <= 5; i++) {
+
         }
-        System.out.println(p);
+        int i = 4;
+        System.out.println(i);
     }
 }
