@@ -119,6 +119,24 @@ public class javaBasics {
 
     }
 
+    public static void hollow_rhombus(int n) {
+        for (int i = 1; i <= n; i++) {
+            // spaces
+            for (int j = 1; j <= (n - i); j++) {
+                System.out.println(" ");
+            }
+            // hollow rectangle - stars
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         // hollow_rectangle(4, 5);
         // inverted_rotated_half_pyramid(7);
@@ -126,7 +144,8 @@ public class javaBasics {
         // floyds_triangle(4);
         // zero_one_triangle(5);
         // butterfly(5);
-        solid_rhombus(10);
+        // solid_rhombus(10);
+        hollow_rhombus(5);
 
     }
 }
