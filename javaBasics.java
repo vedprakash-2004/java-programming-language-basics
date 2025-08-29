@@ -1,26 +1,25 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class javaBasics {
+    public static void printHelloWorld() {
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+    }
 
-    // Function to reverse array in-place
-    public static void reverse(int[] arr) {
-        int left = 0, right = arr.length - 1;
-        while (left < right) {
-            // swap elements
-            int temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
+    public static int calculateSum(int a, int b) {
+        int Sum = a + b;
+        return Sum;
 
-            left++;
-            right--;
-        }
     }
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 5 };
-
-        System.out.println("Original Array: " + Arrays.toString(arr));
-        reverse(arr);
-        System.out.println("Reversed Array: " + Arrays.toString(arr));
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int Sum = calculateSum(A, B);
+        System.out.println("sum is :" + Sum);
     }
 }
