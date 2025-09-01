@@ -1,26 +1,21 @@
 import java.util.*;
+//Largest Number in Array
 
-//Linear Search
 public class Arrays {
 
-    public static int LinearSearch(int numbers[], int key) {
+    public static int getLargest(int numbers[]) {
+        int Largest = Integer.MIN_VALUE; // -infinity
+
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == key) {
-                return i;
+            if (Largest < numbers[i]) {
+                Largest = numbers[i];
             }
         }
-        return -1;
+        return Largest;
     }
 
     public static void main(String args[]) {
-        int numbers[] = { 2, 4, 6, 8, 10, 12, 14, 16 };
-        int key = 20;
-
-        int index = LinearSearch(numbers, key);
-        if (index == -1) {
-            System.out.println("Not found");
-        } else {
-            System.out.println("key ia at index :" + index);
-        }
+        int numbers[] = { 1, 2, 6, 3, 5 };
+        System.out.println("largest value is :" + getLargest(numbers));
     }
 }
