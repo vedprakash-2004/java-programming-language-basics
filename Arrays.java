@@ -1,30 +1,28 @@
-import java.util.*;
-//Largest Number in Array
-
 public class Arrays {
+    public static int binarySearch(int numbers[], int key) {
+        int start = 0, end = numbers.length - 1;
 
-    public static int getLargest(int numbers[]) {
-        int Largest = Integer.MIN_VALUE; // -infinity
-        int smallest = Integer.MAX_VALUE;// infinity
+        while (start <= end) {
+            int mid = (start + end) / 2;
 
-        for (int i = 0; i < numbers.length; i++) {
-            if (Largest < numbers[i]) {
-                Largest = numbers[i];
+            // comparisions
+            if (numbers[mid] == key) {
+                return mid;
             }
+            if (numbers[mid] < key) { // right
+                start = mid + 1;
 
-            if (smallest > numbers[i]) {
-                smallest = numbers[i];
-
+            } else {// left
+                end = mid - 1;
             }
         }
-        System.out.println("smallest value is :" + smallest);
-        return Largest;
-
+        return -1;
     }
 
-    public static void main(String args[]) {
-        int numbers[] = { 1, 2, 6, 3, 5 };
-        System.out.println("largest value is :" + getLargest(numbers));
+    public static void main(String[] args) {
+        int numbers[] = { 2, 4, 6, 8, 10, 12, 14 };
+        int key = 10;
 
+        System.out.println("index for key is :" + binarySearch(numbers, key));
     }
 }
