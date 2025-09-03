@@ -1,28 +1,28 @@
 public class Arrays {
-    public static int binarySearch(int numbers[], int key) {
-        int start = 0, end = numbers.length - 1;
 
-        while (start <= end) {
-            int mid = (start + end) / 2;
+    public static void reverse(int numbers[]) {
+        int first = 0, last = numbers.length - 1;
 
-            // comparisions
-            if (numbers[mid] == key) {
-                return mid;
-            }
-            if (numbers[mid] < key) { // right
-                start = mid + 1;
+        while (first > last) {
+            // swap
+            int temp = numbers[last];
+            numbers[first] = numbers[last];
+            numbers[last] = numbers[temp];
 
-            } else {// left
-                end = mid - 1;
-            }
+            first++;
+            last--;
+
         }
-        return -1;
     }
 
-    public static void main(String[] args) {
-        int numbers[] = { 2, 4, 6, 8, 10, 12, 14 };
-        int key = 10;
+    public static void main(String args[]) {
+        int numbers[] = { 2, 4, 6, 8, 10 };
+        reverse(numbers);
+        // print
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i] + " ");
+        }
+        System.out.println();
 
-        System.out.println("index for key is :" + binarySearch(numbers, key));
     }
 }
