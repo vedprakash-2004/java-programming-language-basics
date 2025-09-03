@@ -1,2 +1,4 @@
-marks[2] = marks[2] + 5;
-        // System.out.println("math :" + marks[2]);
+ // int somu[] = { sum };
+            // for (int l = 0; l < numbers.length; l++) {
+            // System.out.println("arrays:" + somu[l]);
+            // }
