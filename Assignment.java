@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Assignment {
-    public boolean ConPrint(int numbers[]) {
+    public static boolean ConPrint(int numbers[]) {
         for (int i = 0; i < numbers.length; i++) {
             for (int j = i + 1; j < numbers.length; j++) {
                 if (numbers[i] == numbers[j]) {
@@ -13,7 +13,7 @@ public class Assignment {
     }
 
     public static void main(String[] args) {
-        int numbers[] = { 2, 4, 6, 8, 2 };
+        int numbers[] = { 2, 4, 6, 8 };
 
         Assignment obj = new Assignment(); // create object
         System.out.println(obj.ConPrint(numbers));
