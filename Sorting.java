@@ -71,7 +71,7 @@ public class Sorting {
 
     public static void main(String[] args) {
         int arr[] = { 5, 4, 1, 3, 2 };
-        countingSortDecreasing(arr);
+        selectionSort(arr);
 
         printarr(arr);
 
