@@ -1,27 +1,35 @@
 public class TUF {
 
-    public static void BubbleSort(int arr[]) {
-        for (int turn = 0; turn < arr.length - 1; turn++) {
-            for (int i = 0; i < arr.length - 1 - turn; i++) {
-                if (arr[i] > arr[i + 1]) {
-                    int temp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = temp;
+    public static void selectionSort(int nums[]) {
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            int minPos = i;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[minPos] > nums[j]) {
+                    minPos = j;
+
                 }
             }
+            // swap
+            int temp = nums[minPos];
+            nums[minPos] = nums[i];
+            nums[i] = temp;
+
         }
+
     }
 
-    public static void printArr(int arr[]) {
-        for (int j = 0; j < arr.length; j++) {
-            System.out.print(arr[j] + " ");
+    public static void printArr(int nums[]) {
+        for (int j = 0; j < nums.length; j++) {
+            System.out.print(nums[j] + " ");
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
-        int arr[] = { 5, 4, 1, 3, 2 };
-        BubbleSort(arr);
-        printArr(arr);
+        int nums[] = { 5, 4, 1, 3, 2 };
+        selectionSort(nums);
+        printArr(nums);
+
     }
 }
