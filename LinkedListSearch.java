@@ -8,7 +8,7 @@ class Node {
     }
 }
 
-public class TUF {
+public class LinkedListSearch {
     Node head;
 
     // Insert new node at end
