@@ -15,7 +15,6 @@
 //     }
 // }
 
-
 // import java.util.PriorityQueue;
 // public class Heappp {
 
@@ -32,7 +31,7 @@
 //         public int compareTo(Student s2){
 //             return this.rank -s2.rank;
 //         }
-        
+
 //     }
 //     public static void main(String args[]){
 //         PriorityQueue<Student>pq=new PriorityQueue<>();
@@ -119,8 +118,7 @@
 //         public boolean isEmpty(){
 //             return arr.size() == 0;
 //         }
-    
-       
+
 //     }
 //     public static void main(String args[]){
 //         Heap pq = new Heap();
@@ -205,7 +203,7 @@
 //         public int compareTo(Point p2){
 //             return this.distSq - p2.distSq;
 //         }
-        
+
 //     }
 //     public static void main(String args[]){
 //         int pts[][]={{3,3}, {5,-1}, {-2, 4}};
@@ -247,51 +245,102 @@
 //     }
 // }
 
-
 //weakest soldier
 
+// import java.util.*;
+// public class Heappp {
+
+//     static class Row implements Comparable<Row> {
+
+//         int soldiers;
+//         int idx;
+
+//         public Row(int soldiers, int idx){
+//             this.soldiers = soldiers;
+//             this.idx = idx;
+
+//         }
+//         @Override
+//         public int compareTo(Row r2){
+//             if (this.soldiers == r2.soldiers) {
+//                 return this.idx = r2.idx;
+
+//             }else{
+//                 return this.soldiers - r2.soldiers;
+//             }
+//         }
+//     }
+//     public static void main(String args[]){
+//         int army [][] = {{1, 0, 0, 0},
+//                         {1, 1, 1, 1},
+//                         {1, 0, 0, 0},
+//                         {1, 0, 0, 0}};
+
+//         int k=2; 
+//         PriorityQueue<Row> pq = new PriorityQueue<>();
+
+//         for(int i=0; i<army.length; i++){
+//             int count = 0;
+//             for(int j=0; j<army[0].length; j++){
+//                 count += army[i][j] == 1 ? 1:0;
+//             }
+//             pq.add(new Row(count, i));
+//         }
+//         for(int i=0; i<k; i++){
+//             System.out.println("R"+pq.remove().idx);
+//         }
+//     }
+// }
+
+//sliding windows
+
 import java.util.*;
+
 public class Heappp {
 
-    static class Row implements Comparable<Row> {
-    
-        int soldiers;
+    static class Pair implements Comparable<Pair> {
+        int val;
         int idx;
 
-        public Row(int soldiers, int idx){
-            this.soldiers = soldiers;
+        public Pair(int val, int idx) {
+            this.val = val;
             this.idx = idx;
-
         }
-        @Override
-        public int compareTo(Row r2){
-            if (this.soldiers == r2.soldiers) {
-                return this.idx = r2.idx;
 
-            }else{
-                return this.soldiers - r2.soldiers;
-            }
+        @Override
+        public int compareTo(Pair p2) {
+            // descending (max heap)
+            return p2.val - this.val;
         }
     }
-    public static void main(String args[]){
-        int army [][] = {{1, 0, 0, 0},
-                        {1, 1, 1, 1},
-                        {1, 0, 0, 0},
-                        {1, 0, 0, 0}};
 
-        int k=2; 
-        PriorityQueue<Row> pq = new PriorityQueue<>();
+    public static void main(String args[]) {
+        int arr[] = { 1, 3, -1, -3, 5, 3, 6, 7 };
+        int k = 3;
+        int res[] = new int[arr.length - k + 1];
 
-        for(int i=0; i<army.length; i++){
-            int count = 0;
-            for(int j=0; j<army[0].length; j++){
-                count += army[i][j] == 1 ? 1:0;
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+
+        // 1st window
+        for (int i = 0; i < k; i++) {
+            pq.add(new Pair(arr[i], i));
+        }
+        res[0] = pq.peek().val;
+
+        // remaining windows
+        for (int i = k; i < arr.length; i++) {
+            // remove elements out of window
+            while (pq.size() > 0 && pq.peek().idx <= (i - k)) {
+                pq.remove();
             }
-            pq.add(new Row(count, i));
+            pq.add(new Pair(arr[i], i));
+            res[i - k + 1] = pq.peek().val;
         }
-        for(int i=0; i<k; i++){
-            System.out.println("R"+pq.remove().idx);
+
+        // print result
+        for (int i = 0; i < res.length; i++) {
+            System.out.print(res[i] + " ");
         }
+        System.out.println();
     }
 }
-
