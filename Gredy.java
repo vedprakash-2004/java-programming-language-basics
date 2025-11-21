@@ -202,8 +202,8 @@ public class Gredy {
         Integer costVer[] = {2, 1, 3, 1, 4};
         Integer costHor[] = {4, 1, 2};
 
-        Arrays.sort(costVer, Collections.reverseOrder());
-        Arrays.sort(costHor, Collections.reverseOrder());
+        Aarrays.sort(costVer, Collections.reverseOrder());
+        Aarrays.sort(costHor, Collections.reverseOrder());
 
         int h=0, v=0;
         int hp = 0, vp = 0;
